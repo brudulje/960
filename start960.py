@@ -14,28 +14,25 @@ Generate and print a random, legal,
 starting position for chess 960.
 """
 parser = argparse.ArgumentParser()
-parser.add_argument("-v", "--verbose", help="increase output verbosity",
+parser.add_argument("-v", "--verbose", help="Increase output verbosity",
                     action="store_true")
-parser.add_argument("-l", "--language", type=str,# choices=["no", "en"],
-                    default="no",
-                    help="Choose language",)
+parser.add_argument("-l", "--language", type=str,
+                    default="no", help="Choose language",)
 args = parser.parse_args()
 
 # Read languages from file:
 with open("languages.json", "r") as infile:
     lang = json.load(infile)
-lang_found = False
 
 # Set language
-for k, v, in lang.items():
-    if args.language == k:
-        lang_found = True
-        language = v
-        
-# Set backup language
-if not lang_found:
-    language = lang["no"]
+if args.language in lang.keys():
+    language = lang[args.language]
+else:
+    # If language does not exist, set default and report missing language.
+    language = lang[parser.get_default('language')]
     print(f"Language '{args.language}' not found, defaulting to Norwegian.")
+    print("Valid languages are: ", end="")
+    print([k for k in lang.keys()])
 
 king = language[0]
 queen = language[1]
@@ -51,7 +48,6 @@ def replace_char(s, char="", index=0):
 
 
 s = "abcdefgh"
-
 if args.verbose:
     print(" ", s)
 
@@ -71,7 +67,6 @@ pos = [i for i, n in enumerate(s) if n in 'abcdefgh']
 s = replace_char(s, queen, pos[n])
 if args.verbose:
     print(n, s)
-
  
 n = np.random.randint(5)  # First Knight
 pos = [i for i, n in enumerate(s) if n in 'abcdefgh']
