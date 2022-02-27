@@ -1,5 +1,17 @@
 {
 "no": ["K", "D", "T", "L", "S", "Lykke til!"], 
+"se": ["K", "D", "T", "L", "S", "Nu, jävlar!"], 
+"dk": ["K", "D", "T", "L", "S", "Ja, men for fanden, mand!"], 
+"is": ["K", "D", "H", "L", "R", "Gangi þér vel!"],
+"nl": ["K", "D", "H", "L", "P", "Succes!"],
+"ee": ["K", "L", "V", "O", "S", "Edu!"],
+"lt": ["K", "V", "B", "R", "Z", "Sėkmės!"],
+"lv": ["K", "D", "T", "L", "Z", "Lai tev veicas!"],
+"ir": ["R", "B", "C", "E", "D", "Go n-éirí leat!"],
+"pl": ["K", "H", "W", "G", "S", "Powodzenia!"],
+"es": ["R", "D", "T", "A", "C", "Buena suerte!"],
+"cy": ["T", "B", "C", "E", "M", "Pob lwc!"],
+"de": ["K", "D", "T", "L", "S", "Viel glück!"], 
 "en": ["K", "Q", "R", "B", "N", "Go for it!"],
 "fi": ["K", "D", "T", "L", "R", "Hyvä!"],
 "fr": ["R", "D", "T", "F", "C", "Allez!"] 
