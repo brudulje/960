@@ -6,8 +6,6 @@ Create and display a random, legal, starting position for chess960.
 The position is written using eight characters representing the chess pieces
 starting at the a-file:
 
-Usage:
-
     $ python 960.py
       SDLLSTKT   Lykke til!
 
@@ -24,7 +22,7 @@ print the help text to terminal:
                             Choose language
       -f, --fen             Print FEN string
 
-As of v1.0, there are 16 valid languages. Chose your language using the `-l`
+As of v1.0, there are 16 valid languages. Choose your language using the `-l`
 option. Spesifying an invalid language
 will cause 960 to default to Norwegian and output the list of valid languages:
 
@@ -61,24 +59,26 @@ lower case letters `abcdefgh` to represent empty squares.
 
 The process of choosing the position is as follows:
 
-Choose a random number 0-3. Place the *light-squared bishop* on the b, d,
+- Choose a random number 0-3. Place the *light-squared bishop* on the b, d,
 f or h file accordingly.
 
-Choose a random number 0-3. Place the *dark-squared bishop* on the a, c,
+- Choose a random number 0-3. Place the *dark-squared bishop* on the a, c,
 e or g file accordingly.
 
-Now, there are six empty squares. For the rest of th eprocedure, we count
-only empty squares, starting closest to the a-file. Choose a random number
-0-5 and place the *queen* accordingly.
+Now, there are six empty squares. For the rest of the procedure, we count
+only empty squares, starting closest to the a-file.
 
-Choose a random number 0-4, place a *knight* accordingly.
+- Choose a random number 0-5 and place the *queen* accordingly.
 
-Choose a random number 0-3, place the other *knight* accordingly.
+- Choose a random number 0-4, place a *knight* accordingly.
+
+- Choose a random number 0-3, place the other *knight* accordingly.
 
 Now there are three empty squares, and the *king* and both *rooks* are left.
-The king should be in the middle and the rooks on the tow last empty squares.
 
-The black and white pieces are symmetricl. If white has a knight on the
+- The king should be in the middle and the rooks on the two last empty squares.
+
+The black and white pieces are symmetrical. If white has a knight on the
 a-file, so does black. If white has a rook on the f-file, so does black.
 
 This is the process detailed by the `-v` option.
