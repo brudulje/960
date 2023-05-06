@@ -38,7 +38,7 @@ will cause 960 to default to Norwegian and output the list of valid languages:
       CFFTRDTC   Allez!
 
 The `-f` option will give the FEN string for the chosen starting position.
-THe FEN string will allways be in English:
+The FEN string will allways be in English:
 
     $ python 960.py -l nl -f
       HPDKLLPH   Succes!
@@ -47,6 +47,15 @@ THe FEN string will allways be in English:
 The `-v` option will give a more verbose output, showing the random numbers
 which were chosen and how the positions are filled with pieces, using the
 lower case letters `abcdefgh` to represent empty squares.
+
+    $ python 960.py -v
+      abcdefgh
+    2 abcdeLgh
+    1 abLdeLgh
+    1 aDLdeLgh
+    1 aDLSeLgh
+    3 aDLSeLgS
+      TDLSKLTS   Lykke til!
 
 ## Behind the scenes
 
